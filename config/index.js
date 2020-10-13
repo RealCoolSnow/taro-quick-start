@@ -18,7 +18,7 @@ const config = {
     options: {
     }
   },
-  framework: 'vue3',
+  framework: 'react',
   mini: {
     postcss: {
       pxtransform: {
