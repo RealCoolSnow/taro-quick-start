@@ -2,9 +2,9 @@
   "name": "taro-quick-start",
   "version": "1.0.0",
   "private": true,
-  "description": "A taro project",
+  "description": "Quick start project with Taro &amp; Vue3 &amp; TypeScript.",
   "templateInfo": {
-    "name": "vue3-vuex",
+    "name": "default",
     "typescript": true,
     "css": "less"
   },
@@ -16,6 +16,7 @@
     "build:h5": "taro build --type h5",
     "build:rn": "taro build --type rn",
     "build:qq": "taro build --type qq",
+    "build:jd": "taro build --type jd",
     "build:quickapp": "taro build --type quickapp",
     "dev:weapp": "npm run build:weapp -- --watch",
     "dev:swan": "npm run build:swan -- --watch",
@@ -24,6 +25,7 @@
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
+    "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch"
   },
   "browserslist": [
@@ -32,24 +34,22 @@
     "ios >= 8"
   ],
   "author": "",
-  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@tarojs/components": "3.0.14",
     "@tarojs/runtime": "3.0.14",
     "@tarojs/taro": "3.0.14",
-    "@tarojs/components": "3.0.14",
-    "vuex": "^4.0.0-beta.4",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0-beta.15"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.13.6",
     "@tarojs/mini-runner": "3.0.14",
-    "@tarojs/webpack-runner": "3.0.14",
     "@babel/core": "^7.8.0",
+    "@tarojs/webpack-runner": "3.0.14",
     "babel-preset-taro": "3.0.14",
-    "@vue/compiler-sfc": "^3.0.0",
-    "vue-loader": "^16.0.0-beta.8",
-    "eslint-plugin-vue": "^7.0.0",
+    "@vue/compiler-sfc": "^3.0.0-beta.15",
+    "vue-loader": "^16.0.0-beta.3",
+    "eslint-plugin-vue": "^7.0.0-alpha.6",
     "eslint-config-taro": "3.0.14",
     "eslint": "^6.8.0",
     "stylelint": "9.3.0",
