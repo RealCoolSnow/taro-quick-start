@@ -56,5 +56,9 @@
     "@typescript-eslint/parser": "^2.x",
     "@typescript-eslint/eslint-plugin": "^2.x",
     "typescript": "^3.7.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

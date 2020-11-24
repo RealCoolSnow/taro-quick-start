@@ -1,6 +1,7 @@
 <template>
-  <view class="index">
+  <view class="container">
     <text>{{ msg }}</text>
+    <button size="mini">click</button>
   </view>
 </template>
 
