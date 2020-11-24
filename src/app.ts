@@ -1,20 +1,9 @@
-import { Component } from 'react'
+import { createApp } from 'vue'
 import './app.less'
 
-class App extends Component {
-
-  componentDidMount () {}
-
-  componentDidShow () {}
-
-  componentDidHide () {}
-
-  componentDidCatchError () {}
-
-  // this.props.children 是将要会渲染的页面
-  render () {
-    return this.props.children
-  }
-}
+const App = createApp({
+  onShow (options) {},
+  // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
+})
 
 export default App

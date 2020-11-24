@@ -1,6 +1,6 @@
 const config = {
   projectName: 'taro-quick-start',
-  date: '2020-10-13',
+  date: '2020-11-24',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -18,7 +18,7 @@ const config = {
     options: {
     }
   },
-  framework: 'react',
+  framework: 'vue3',
   mini: {
     postcss: {
       pxtransform: {

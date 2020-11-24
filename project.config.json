@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
   "projectname": "taro-quick-start",
-  "description": "Quick start project with Taro",
+  "description": "Taro and Vue3.",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
