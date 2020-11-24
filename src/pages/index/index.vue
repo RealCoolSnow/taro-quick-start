@@ -1,20 +1,30 @@
 <template>
   <view class="container">
-    <text>{{ msg }}</text>
-    <button size="mini">click</button>
+    <button @click="httpTest">Http Test</button>
   </view>
 </template>
 
 <script>
 import { ref } from 'vue'
 import './index.less'
+import { helloGet } from '../../service/api'
 
 export default {
-  setup () {
+  setup() {
     const msg = ref('Hello world')
-    return {
-      msg
+    const httpTest = () => {
+      helloGet()
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
-  }
+    return {
+      msg,
+      httpTest,
+    }
+  },
 }
 </script>
