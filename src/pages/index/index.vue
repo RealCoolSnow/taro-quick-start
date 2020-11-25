@@ -1,9 +1,10 @@
 <template>
   <view class="container">
-    <button @tap="httpTest">Http Test</button>
-    <button @tap="inc">Counter - {{ counter }}</button>
-    <navigator url="/pages/about/index" class="btn-about">
-      <text>about</text>
+    <Logo />
+    <button @tap="httpTest" class="mt-10">Http Test</button>
+    <button @tap="inc" class="mt-10">Counter - {{ counter }}</button>
+    <navigator url="/pages/about/index" class="nav-about mt-10">
+      <text>Show About</text>
     </navigator>
   </view>
 </template>
@@ -15,8 +16,12 @@ import { helloGet } from '../../service/api'
 import Taro from '@tarojs/taro'
 import store from '../../store'
 import MutationTypes from '../../store/mutation-types'
+import Logo from '../../components/Logo.vue'
 
 export default {
+  components: {
+    Logo,
+  },
   setup() {
     const counter = computed(() => store.getters.counter)
     const inc = () => {
