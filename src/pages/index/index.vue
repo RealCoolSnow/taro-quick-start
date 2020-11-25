@@ -13,11 +13,12 @@
 <script lang="ts">
 import { computed } from 'vue'
 import './index.less'
-import { helloGet } from '../../service/api'
+import { helloGet } from '@/service/api'
 import Taro from '@tarojs/taro'
-import MutationTypes from '../../store/mutation-types'
-import Logo from '../../components/Logo.vue'
+import MutationTypes from '@/store/mutation-types'
+import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
+import { showAlert } from '@/utils/util'
 
 export default {
   components: {
@@ -37,11 +38,11 @@ export default {
       helloGet()
         .then((res) => {
           console.log(res)
-          Taro.showModal({ content: JSON.stringify(res), showCancel: false })
+          showAlert('httpTest', res)
         })
         .catch((err) => {
           console.log(err)
-          Taro.showModal({ content: err, showCancel: false })
+          showAlert('httpTest', err)
         })
     }
     return {
