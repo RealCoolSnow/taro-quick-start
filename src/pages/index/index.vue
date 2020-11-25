@@ -1,17 +1,24 @@
 <template>
   <view class="container">
     <Logo />
-    <button @tap="httpTest" class="mt-10">Http Test</button>
-    <button @tap="inc" class="mt-10">Counter - {{ counter }}</button>
+    <AtButton @tap="httpTest" class="btn mt-10">Http Test</AtButton>
+    <AtButton @tap="inc" class="btn mt-10">Counter - {{ counter }}</AtButton>
     <navigator url="/pages/about/index" class="nav-about mt-10">
-      <text>Show About</text>
+      <AtButton>Show About</AtButton>
     </navigator>
-    <AtButton type="primary" class="mt-10" @tap="state.actionSheetShow=true">Show Action</AtButton>
-    <AtAvatar circle image="https://taro-ui.jd.com/img/logo-taro.png" />
+    <AtButton
+      type="primary"
+      class="btn mt-10"
+      @tap="state.actionSheetShow = true"
+      >Show Action</AtButton
+    >
+    <AtBadge :value="99" class="mt-10">
+      <AtAvatar circle image="https://taro-ui.jd.com/img/logo-taro.png"
+    /></AtBadge>
     <view v-html="htmlContent" class="mt-10" />
     <AtActionSheet
       :isOpened="state.actionSheetShow"
-      @Close="state.actionSheetShow=false"
+      @Close="state.actionSheetShow = false"
       cancelText="取消"
       title="这是标题"
     >
@@ -34,6 +41,7 @@ import {
   AtAvatar,
   AtActionSheet,
   AtActionSheetItem,
+  AtBadge,
 } from 'taro-ui-vue'
 
 export default {
@@ -43,6 +51,7 @@ export default {
     AtAvatar,
     AtActionSheet,
     AtActionSheetItem,
+    AtBadge,
   },
   setup() {
     const store = useStore()
