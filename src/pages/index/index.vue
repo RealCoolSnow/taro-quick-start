@@ -1,6 +1,6 @@
 <template>
   <view class="container">
-    <button @click="httpTest">Http Test</button>
+    <button @tap="httpTest">Http Test</button>
     <navigator url="/pages/about/index" class="btn-about">
       <button>about</button>
     </navigator>
@@ -11,6 +11,7 @@
 import { ref } from 'vue'
 import './index.less'
 import { helloGet } from '../../service/api'
+import Taro from '@tarojs/taro'
 
 export default {
   setup() {
@@ -19,11 +20,11 @@ export default {
       helloGet()
         .then((res) => {
           console.log(res)
-          alert(JSON.stringify(res))
+          Taro.showModal({ content: JSON.stringify(res), showCancel: false })
         })
         .catch((err) => {
           console.log(err)
-          alert(err)
+          Taro.showModal({ content: err, showCancel: false })
         })
     }
     return {
