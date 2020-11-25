@@ -1,30 +1,58 @@
 <template>
   <view class="container">
     <Logo />
-    <button @tap="httpTest" class="mt-10">Http Test</button>
-    <button @tap="inc" class="mt-10">Counter - {{ counter }}</button>
+    <van-button @click="httpTest" class="btn mt-10">Http Test</van-button>
+    <van-button @click="inc" class="btn mt-10"
+      >Counter - {{ counter }}</van-button
+    >
+    <van-button @click="state.actionShow = true" class="btn mt-10"
+      >Show Action</van-button
+    >
     <navigator url="/pages/about/index" class="nav-about mt-10">
-      <text>Show About</text>
+      <van-button>Show About</van-button>
     </navigator>
     <view v-html="htmlContent" class="mt-10" />
+    <van-action-sheet
+      v-model:show="state.actionShow"
+      :actions="state.actions"
+      @select="onActionSelect"
+      cancel-text="Cancel"
+    />
   </view>
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed, reactive } from 'vue'
 import './index.less'
 import { helloGet } from '@/service/api'
 import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
 import { showAlert } from '@/utils/util'
+import { Button, ActionSheet, Cell } from 'vant'
 
 export default {
   components: {
     Logo,
+    'van-button': Button,
+    'van-action-sheet': ActionSheet,
+    'van-cell': Cell,
   },
   setup() {
     const store = useStore()
+    const state = reactive({
+      actionShow: false,
+      actions: [
+        {
+          name: 'Action - 1',
+          subname: 'this is subname',
+          color: 'red',
+          value: 1,
+        },
+        { name: 'Action - 2' },
+        { name: 'Action - 3' },
+      ],
+    })
     const htmlContent = `<div style="color:red">this is html content</div>`
     const counter = computed(() => store.getters.counter)
     const inc = () => {
@@ -41,11 +69,17 @@ export default {
           showAlert('httpTest', err)
         })
     }
+    const onActionSelect = (e: any) => {
+      state.actionShow = false
+      showAlert('onActionSelect', e)
+    }
     return {
+      state,
       httpTest,
       counter,
       inc,
       htmlContent,
+      onActionSelect,
     }
   },
 }
