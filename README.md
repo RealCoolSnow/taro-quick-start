@@ -6,6 +6,8 @@
 
 - Taro with Vue3
 
+- [Taro UI](http://taro-ui-vue.fontend.com/#/docs/quickstart)
+
 - store、network - works out-of-box
 
 - TypeScript
