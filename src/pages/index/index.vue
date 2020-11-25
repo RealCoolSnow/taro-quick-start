@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { computed, reactive } from 'vue'
+import { computed } from 'vue'
 import './index.less'
 import { helloGet } from '@/service/api'
 import MutationTypes from '@/store/mutation-types'
