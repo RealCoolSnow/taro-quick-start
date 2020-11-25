@@ -6,6 +6,7 @@
     <navigator url="/pages/about/index" class="nav-about mt-10">
       <text>Show About</text>
     </navigator>
+    <view v-html="htmlContent" class="mt-10" />
   </view>
 </template>
 
@@ -25,6 +26,10 @@ export default {
   setup() {
     const store = useStore()
     const counter = computed(() => store.getters.counter)
+    const htmlContent = `<div>
+      <img src="https://taro-ui.jd.com/img/logo-taro.png" style="width:30px;height:30px">
+      <div style="color:red">this is html content</div>
+      </div>`
     const inc = () => {
       store.commit(MutationTypes.APP.SET_COUNTER, 1)
     }
@@ -43,6 +48,7 @@ export default {
       httpTest,
       counter,
       inc,
+      htmlContent,
     }
   },
 }
