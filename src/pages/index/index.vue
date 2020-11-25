@@ -14,15 +14,16 @@ import { computed } from 'vue'
 import './index.less'
 import { helloGet } from '../../service/api'
 import Taro from '@tarojs/taro'
-import store from '../../store'
 import MutationTypes from '../../store/mutation-types'
 import Logo from '../../components/Logo.vue'
+import { useStore } from 'vuex'
 
 export default {
   components: {
     Logo,
   },
   setup() {
+    const store = useStore()
     const counter = computed(() => store.getters.counter)
     const inc = () => {
       store.commit(MutationTypes.APP.SET_COUNTER, 1)

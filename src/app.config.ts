@@ -6,7 +6,7 @@ export default {
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
+    navigationBarTitleText: 'Taro Quick Start',
     navigationBarTextStyle: 'black'
   }
 }
