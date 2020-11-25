@@ -14,7 +14,6 @@
 import { computed } from 'vue'
 import './index.less'
 import { helloGet } from '@/service/api'
-import Taro from '@tarojs/taro'
 import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
