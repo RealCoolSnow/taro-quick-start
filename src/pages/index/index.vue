@@ -6,10 +6,7 @@
     <navigator url="/pages/about/index" class="nav-about mt-10">
       <AtButton>Show About</AtButton>
     </navigator>
-    <AtButton
-      type="primary"
-      class="btn mt-10"
-      @tap="state.actionSheetShow = true"
+    <AtButton type="primary" class="btn mt-10" @tap="state.actionShow = true"
       >Show Action</AtButton
     >
     <AtBadge :value="99" class="mt-10">
@@ -17,13 +14,17 @@
     /></AtBadge>
     <view v-html="htmlContent" class="mt-10" />
     <AtActionSheet
-      :isOpened="state.actionSheetShow"
-      @Close="state.actionSheetShow = false"
+      :isOpened="state.actionShow"
+      @close="state.actionShow = false"
       cancelText="取消"
       title="这是标题"
     >
-      <AtActionSheetItem> Action - 1 </AtActionSheetItem>
-      <AtActionSheetItem> Action - 2 </AtActionSheetItem>
+      <AtActionSheetItem
+        @click="onActionSelect(item)"
+        v-for="item in state.actions"
+        :key="item"
+        >{{ item.name }}</AtActionSheetItem
+      >
     </AtActionSheet>
   </view>
 </template>
@@ -56,7 +57,17 @@ export default {
   setup() {
     const store = useStore()
     const state = reactive({
-      actionSheetShow: false,
+      actionShow: false,
+      actions: [
+        {
+          name: 'Action - 1',
+          value: 1,
+        },
+        {
+          name: 'Action - 2',
+          value: 2,
+        },
+      ],
     })
     const htmlContent = `<div style="color:red">this is html content</div>`
     const counter = computed(() => store.getters.counter)
@@ -74,12 +85,17 @@ export default {
           showAlert('httpTest', err)
         })
     }
+    const onActionSelect = (e: any) => {
+      state.actionShow = false
+      showAlert('onActionSelect', e)
+    }
     return {
       state,
       httpTest,
       counter,
       inc,
       htmlContent,
+      onActionSelect,
     }
   },
 }
