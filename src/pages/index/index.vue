@@ -1,10 +1,10 @@
 <template>
   <view class="container">
     <Logo />
-    <button @tap="httpTest" class="mt-10">Http Test</button>
-    <button @tap="inc" class="mt-10">Counter - {{ counter }}</button>
+    <button @tap="httpTest" class="btn mt-10">Http Test</button>
+    <button @tap="inc" class="btn mt-10">Counter - {{ counter }}</button>
     <navigator url="/pages/about/index" class="nav-about mt-10">
-      <text>Show About</text>
+      <button>Show About</button>
     </navigator>
     <view v-html="htmlContent" class="mt-10" />
   </view>
