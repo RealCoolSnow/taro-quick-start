@@ -1,21 +1,27 @@
 <template>
   <view class="container">
     <button @tap="httpTest">Http Test</button>
+    <button @tap="inc">Counter - {{ counter }}</button>
     <navigator url="/pages/about/index" class="btn-about">
-      <button>about</button>
+      <text>about</text>
     </navigator>
   </view>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts">
+import { computed } from 'vue'
 import './index.less'
 import { helloGet } from '../../service/api'
 import Taro from '@tarojs/taro'
+import store from '../../store'
+import MutationTypes from '../../store/mutation-types'
 
 export default {
   setup() {
-    const msg = ref('Hello world')
+    const counter = computed(() => store.getters.counter)
+    const inc = () => {
+      store.commit(MutationTypes.APP.SET_COUNTER, 1)
+    }
     const httpTest = () => {
       helloGet()
         .then((res) => {
@@ -28,8 +34,9 @@ export default {
         })
     }
     return {
-      msg,
       httpTest,
+      counter,
+      inc,
     }
   },
 }
