@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Quick start project with Taro & Vue3.",
+  "author": "CoolSnow<coolsnow2020@gmail.com>",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -33,30 +34,29 @@
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@tarojs/components": "3.0.23",
-    "@tarojs/runtime": "3.0.23",
-    "@tarojs/taro": "3.0.23",
+    "@tarojs/components": "^3.0.23",
+    "@tarojs/runtime": "^3.0.23",
+    "@tarojs/taro": "^3.0.23",
     "vue": "^3.0.5",
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.6",
-    "@tarojs/mini-runner": "3.0.23",
     "@babel/core": "^7.8.0",
-    "@tarojs/webpack-runner": "3.0.23",
-    "babel-preset-taro": "3.0.23",
-    "@vue/compiler-sfc": "^3.0.0",
-    "vue-loader": "^16.0.0-beta.8",
-    "eslint-plugin-vue": "^7.0.0",
-    "eslint-config-taro": "3.0.23",
-    "eslint": "^6.8.0",
-    "stylelint": "9.3.0",
-    "@typescript-eslint/parser": "^2.x",
+    "@tarojs/mini-runner": "^3.0.23",
+    "@tarojs/webpack-runner": "^3.0.23",
+    "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^2.x",
-    "typescript": "^3.7.0"
+    "@typescript-eslint/parser": "^2.x",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-preset-taro": "^3.0.23",
+    "eslint": "^6.8.0",
+    "eslint-config-taro": "^3.0.23",
+    "eslint-plugin-vue": "^7.0.0",
+    "stylelint": "^9.10.1",
+    "typescript": "^3.7.0",
+    "vue-loader": "^16.0.0-beta.8"
   },
   "prettier": {
     "semi": false,
