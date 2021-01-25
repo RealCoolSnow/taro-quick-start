@@ -1,6 +1,16 @@
 <template>
   <view class="container">
-    <Logo />
+    <view v-if="!userInfo">
+      <Logo />
+      <button class="btn mt-10" @tap="onGetUserInfo">getUserInfo</button>
+    </view>
+    <view class="userinfo" v-else>
+      <image
+        style="width: 100px; height: 100px; border-radius: 100px"
+        :src="userInfo.avatarUrl"
+      />
+      <text class="mt-10">{{ userInfo.nickName }}</text>
+    </view>
     <button @tap="httpTest" class="btn mt-10">Http Test</button>
     <button @tap="inc" class="btn mt-10">Counter - {{ counter }}</button>
     <navigator url="/pages/about/index" class="nav-about mt-10">
@@ -18,6 +28,7 @@ import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
 import { showAlert } from '@/utils/util'
+import { getUserInfo } from '@/utils/login'
 
 export default {
   components: {
@@ -27,6 +38,10 @@ export default {
     const store = useStore()
     const htmlContent = `<div style="color:red">this is html content</div>`
     const counter = computed(() => store.getters.counter)
+    const userInfo = computed(() => store.getters.userInfo)
+    const onGetUserInfo = () => {
+      getUserInfo()
+    }
     const inc = () => {
       store.commit(MutationTypes.APP.SET_COUNTER, 1)
     }
@@ -44,6 +59,8 @@ export default {
     return {
       httpTest,
       counter,
+      userInfo,
+      onGetUserInfo,
       inc,
       htmlContent,
     }

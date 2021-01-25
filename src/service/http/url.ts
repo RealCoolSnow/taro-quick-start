@@ -1,12 +1,14 @@
 import store from '../../store'
 import config from '../../config'
 
-const baseUrl = config.baseUrl
-
-const fullUrl = (url: string, params?: { [key: string]: any }) => {
+const fullUrlWithBase = (
+  baseUrl: string,
+  url: string,
+  params?: { [key: string]: any }
+) => {
   let a = `${baseUrl}/${url}`
   if (!a.includes('?')) a += '?'
-  a += `lang=${store.getters.language}`
+  a += `app=${config.app}&lang=${store.getters.language}&uid=${store.getters.userId}&session_id=${store.getters.sessionId}`
   if (params) {
     Object.keys(params).forEach((key, index) => {
       a += `&${key}=${params[key]}`
@@ -16,4 +18,8 @@ const fullUrl = (url: string, params?: { [key: string]: any }) => {
   return a
 }
 
-export { fullUrl }
+const fullUrl = (url: string, params?: { [key: string]: any }) => {
+  return fullUrlWithBase(config.baseUrl, url, params)
+}
+
+export { fullUrlWithBase, fullUrl }
