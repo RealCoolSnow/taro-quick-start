@@ -43,20 +43,20 @@
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
+    "@babel/core": "^7.12.10",
     "@tarojs/mini-runner": "^3.0.24",
     "@tarojs/webpack-runner": "^3.0.24",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^2.x",
     "@typescript-eslint/parser": "^2.x",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.0.5",
     "babel-preset-taro": "^3.0.24",
     "eslint": "^6.8.0",
     "eslint-config-taro": "^3.0.24",
-    "eslint-plugin-vue": "^7.0.0",
+    "eslint-plugin-vue": "^7.5.0",
     "stylelint": "^9.10.1",
     "typescript": "^3.7.0",
-    "vue-loader": "^16.0.0-beta.8"
+    "vue-loader": "^16.1.2"
   },
   "prettier": {
     "semi": false,
