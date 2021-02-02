@@ -1,13 +1,18 @@
 <template>
   <view class="container">
     <Logo />
-    <van-button @click="httpTest" class="btn mt-10" type="primary">Http Test</van-button>
+    <van-button @click="httpTest" class="btn mt-10" type="primary"
+      >Http Test</van-button
+    >
     <van-button @click="inc" class="btn mt-10"
       >Counter - {{ counter }}</van-button
     >
     <van-button @click="state.actionShow = true" class="btn mt-10"
       >Show Action</van-button
     >
+    <van-button @click="onPreviewImage" class="btn mt-10">
+      Preview Image
+    </van-button>
     <navigator url="/pages/about/index" class="nav-about mt-10">
       <van-button>Show About</van-button>
     </navigator>
@@ -29,14 +34,13 @@ import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
 import { showAlert } from '@/utils/util'
-import { Button, ActionSheet, Cell } from 'vant'
+import { Button, ActionSheet, ImagePreview } from 'vant'
 
 export default {
   components: {
     Logo,
     'van-button': Button,
     'van-action-sheet': ActionSheet,
-    'van-cell': Cell,
   },
   setup() {
     const store = useStore()
@@ -73,6 +77,9 @@ export default {
       state.actionShow = false
       showAlert('onActionSelect', e)
     }
+    const onPreviewImage = () => {
+      ImagePreview(['https://img01.yzcdn.cn/vant/apple-1.jpg'])
+    }
     return {
       state,
       httpTest,
@@ -80,6 +87,7 @@ export default {
       inc,
       htmlContent,
       onActionSelect,
+      onPreviewImage,
     }
   },
 }
