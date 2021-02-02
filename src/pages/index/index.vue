@@ -1,7 +1,7 @@
 <template>
   <view class="container">
     <Logo />
-    <van-button @click="httpTest" class="btn mt-10">Http Test</van-button>
+    <van-button @click="httpTest" class="btn mt-10" type="primary">Http Test</van-button>
     <van-button @click="inc" class="btn mt-10"
       >Counter - {{ counter }}</van-button
     >
