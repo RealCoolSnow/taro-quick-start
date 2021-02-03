@@ -26,6 +26,8 @@ const config = {
   framework: 'vue3',
   mini: {
     postcss: {
+      tailwindcss: { enable: true },
+      'tailwind-taro': { enable: true },
       pxtransform: {
         enable: true,
         config: {},
@@ -49,6 +51,8 @@ const config = {
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
+      tailwindcss: { enable: true },
+      'tailwind-taro': { enable: true },
       autoprefixer: {
         enable: true,
         config: {},

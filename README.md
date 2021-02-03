@@ -1,27 +1,17 @@
 <p align="center">
-⚡️Quick start project with Taro & Vue3 & TypeScript.<br/>
+使用 Tailwind CSS<br/>
 </p>
 
-## Features
+## 注意事项
 
-- Taro with Vue3
+小程序不支持使用反斜杠和冒号作为类名, 反斜杠修改成使用下划线 `_`（参考 [taro-tailwind](https://github.com/windedge/taro-tailwind)）
 
-- store、network - works out-of-box
+```jsx
+<View className="w-1/3"></View>
+```
 
-- TypeScript
+应该写成:
 
-- [Composition api](https://composition-api.vuejs.org/)
-
-## Usage
-
-1. Clone this repository
-2. npm install
-3. npm run dev:weapp
-
-# Author
-
-CoolSnow
-
-Email: coolsnow2020@gmail.com
-
-Twitter: https://twitter.com/CoolSnow0927
+```jsx
+<View className="w-1_3"></View>
+```

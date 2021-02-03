@@ -1,9 +1,9 @@
 <template>
-  <view class="container">
+  <view class="flex flex-col items-center mx-auto">
     <Logo />
-    <button @tap="httpTest" class="btn mt-10">Http Test</button>
-    <button @tap="inc" class="btn mt-10">Counter - {{ counter }}</button>
-    <navigator url="/pages/about/index" class="nav-about mt-10">
+    <button @tap="httpTest" class="w-4_5 mt-10">Http Test</button>
+    <button @tap="inc" class="w-4_5 text-purple-700 mt-10">Counter - {{ counter }}</button>
+    <navigator url="/pages/about/index" class="w-4_5 italic mt-10">
       <button>Show About</button>
     </navigator>
     <view v-html="htmlContent" class="mt-10" />

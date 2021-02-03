@@ -1,7 +1,7 @@
 <template>
-  <view class="container">
+  <view class="flex flex-col items-center p-8">
     <text>{{ msg }}</text>
-    <button @tap="back" class="btn-back">Back</button>
+    <button @tap="back" class="btn" hover-class="btn-hover">Back</button>
   </view>
 </template>
 <script lang="ts">

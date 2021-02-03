@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import './tailwind.css'
 import './app.less'
 import store from './store'
 
