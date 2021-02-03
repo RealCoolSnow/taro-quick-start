@@ -2,17 +2,17 @@ module.exports = {
   purge: ['./src/**/*.vue'],
   corePlugins: {
     // 涉及到子代选择器（>），wx 小程序不支持
-    space:false,
+    space: false,
     divideStyle: false,
-    divideWidth:false,
+    divideWidth: false,
     divideColor: false,
-    divideOpacity:false,
+    divideOpacity: false,
     // 涉及到通配符（*），wx 小程序不支持
-    ringWidth:false,
-    ringColor:false,
-    ringOpacity:false,
-    ringOffsetWidth:false,
-    ringOffsetColor:false,
+    ringWidth: false,
+    ringColor: false,
+    ringOpacity: false,
+    ringOffsetWidth: false,
+    ringOffsetColor: false,
     // web 浏览器相关功能，wx 小程序不支持
     appearance: false,
     cursor: false,
@@ -24,19 +24,25 @@ module.exports = {
     userSelect: false,
   },
   theme: {
-    extend:{
+    extend: {
       zIndex: {
         '-1': '-1',
       },
-        colors: {
-          red: {
-            deep: '#fbbfbc',
-            middle: '#fde2e2',
-            shallow: '#fef1f1',
-          },
+      colors: {
+        red: {
+          deep: '#fbbfbc',
+          middle: '#fde2e2',
+          shallow: '#fef1f1',
         },
+      },
     },
     spacing: {
+      //text-xs、sm、base...
+      xs: '18rpx',
+      sm: '24rpx',
+      base: '28rpx',
+      lg: '32rpx',
+      xl: '36rpx',
       0: '0',
       1: '2rpx',
       2: '4rpx',
@@ -97,13 +103,12 @@ module.exports = {
       '11_12': '91.666667%',
       full: '100%',
       auto: 'auto',
-
     },
     fontSize: (theme) => theme('spacing'),
     borderWidth: (theme) => theme('spacing'),
     lineHeight: (theme) => theme('spacing'),
     translate: (theme) => theme('spacing'),
-    inset: theme => theme('spacing'),
+    inset: (theme) => theme('spacing'),
     width: (theme) => ({
       ...theme('spacing'),
       screen: '100vw',
@@ -116,5 +121,3 @@ module.exports = {
     maxHeight: (theme) => theme('width'),
   },
 }
-
-

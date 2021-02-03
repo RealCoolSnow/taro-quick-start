@@ -1,12 +1,13 @@
 <template>
   <view class="flex flex-col items-center mx-auto">
     <Logo />
-    <button @tap="httpTest" class="w-4_5 mt-10">Http Test</button>
-    <button @tap="inc" class="w-4_5 text-purple-700 mt-10">Counter - {{ counter }}</button>
-    <navigator url="/pages/about/index" class="w-4_5 italic mt-10">
-      <button>Show About</button>
+    <button @tap="httpTest" class="w-4_5 mt-10 text-base">Http Test</button>
+    <button @tap="inc" class="w-4_5 text-purple-700 mt-10 text-base">Counter - {{ counter }}</button>
+    <navigator url="/pages/about/index" class="w-4_5 mt-10">
+      <button class="italic text-base">Show About</button>
     </navigator>
-    <view v-html="htmlContent" class="mt-10" />
+    <view v-html="htmlContent" class="mt-10 text-lg" />
+    <view class="mt-10 border-gray-500 border-2 border-dashed w-1_2 text-center">abc</view>
   </view>
 </template>
 
