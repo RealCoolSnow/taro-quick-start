@@ -1,13 +1,23 @@
 <template>
   <view class="flex flex-col items-center mx-auto">
     <Logo />
-    <button @tap="httpTest" class="w-4_5 mt-10 text-base">Http Test</button>
-    <button @tap="inc" class="w-4_5 text-purple-700 mt-10 text-base">Counter - {{ counter }}</button>
+    <view class="w-4_5 mt-10">
+      <AtButton @tap="httpTest" class="text-base" type="primary"
+        >Http Test</AtButton
+      >
+    </view>
+    <view class="w-4_5 mt-10">
+      <AtButton @tap="inc" class="text-purple-700 text-base">
+        Counter - {{ counter }}
+      </AtButton>
+    </view>
     <navigator url="/pages/about/index" class="w-4_5 mt-10">
-      <button class="italic text-base">Show About</button>
+      <AtButton class="italic text-base">Show About</AtButton>
     </navigator>
     <view v-html="htmlContent" class="mt-10 text-lg" />
-    <view class="mt-10 border-gray-500 border-2 border-dashed w-1_2 text-center">abc</view>
+    <view class="mt-10 border-gray-500 border-2 border-dashed w-1_2 text-center"
+      >abc</view
+    >
   </view>
 </template>
 
@@ -19,10 +29,11 @@ import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
 import { showAlert } from '@/utils/util'
-
+import { AtButton } from 'taro-ui-vue'
 export default {
   components: {
     Logo,
+    AtButton,
   },
   setup() {
     const store = useStore()

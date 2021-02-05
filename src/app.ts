@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import './tailwind.css'
 import './app.less'
 import store from './store'
+import 'taro-ui-vue/dist/style/index.scss'
 
 const app = createApp({
   setup(options) {

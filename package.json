@@ -39,6 +39,7 @@
     "@tarojs/components": "^3.0.24",
     "@tarojs/runtime": "^3.0.24",
     "@tarojs/taro": "^3.0.24",
+    "taro-ui-vue": "^1.0.0-beta.6",
     "vue": "^3.0.5",
     "vuex": "^4.0.0"
   },
