@@ -1,20 +1,20 @@
 <template>
-  <view class="container">
-    <view v-if="!userInfo">
+  <view class="flex flex-col items-center mx-auto">
+    <view v-if="!userInfo" class="w-4_5 mt-10">
       <Logo />
-      <button class="btn mt-10" @tap="onGetUserInfo">getUserInfo</button>
+      <AtButton @tap="onGetUserInfo">getUserInfo</AtButton>
     </view>
-    <view class="userinfo" v-else>
+    <view class="flex flex-col items-center" v-else>
       <image
         style="width: 100px; height: 100px; border-radius: 100px"
         :src="userInfo.avatarUrl"
       />
       <text class="mt-10">{{ userInfo.nickName }}</text>
     </view>
-    <button @tap="httpTest" class="btn mt-10">Http Test</button>
-    <button @tap="inc" class="btn mt-10">Counter - {{ counter }}</button>
-    <navigator url="/pages/about/index" class="nav-about mt-10">
-      <button>Show About</button>
+    <button @tap="httpTest" class="w-4_5 mt-10">Http Test</button>
+    <button @tap="inc" class="w-4_5 mt-10">Counter - {{ counter }}</button>
+    <navigator url="/pages/about/index" class="w-4_5 mt-10">
+      <AtButton type="primary">Show About</AtButton>
     </navigator>
     <view v-html="htmlContent" class="mt-10" />
   </view>
@@ -29,10 +29,12 @@ import Logo from '@/components/Logo.vue'
 import { useStore } from 'vuex'
 import { showAlert } from '@/utils/util'
 import { getUserInfo } from '@/utils/login'
+import { AtButton } from 'taro-ui-vue'
 
 export default {
   components: {
     Logo,
+    AtButton
   },
   setup() {
     const store = useStore()
