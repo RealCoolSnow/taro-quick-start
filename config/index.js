@@ -26,6 +26,8 @@ const config = {
   framework: 'vue3',
   mini: {
     postcss: {
+      tailwindcss: { enable: true },
+      'tailwind-taro': { enable: true },
       pxtransform: {
         enable: true,
         config: {},
@@ -48,7 +50,10 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['taro-ui-vue'],
     postcss: {
+      tailwindcss: { enable: true },
+      'tailwind-taro': { enable: true },
       autoprefixer: {
         enable: true,
         config: {},
