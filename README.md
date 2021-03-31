@@ -10,6 +10,8 @@
 
 - TypeScript
 
+- [windcss](https://windicss.org/)
+
 - [Composition api](https://composition-api.vuejs.org/)
 
 ## Usage
