@@ -1,18 +1,17 @@
 <template>
-  <view class="container">
+  <view class="flex flex-col items-center p-2">
     <Logo />
-    <button @tap="httpTest" class="btn mt-10">Http Test</button>
-    <button @tap="inc" class="btn mt-10">Counter - {{ counter }}</button>
-    <navigator url="/pages/about/index" class="nav-about mt-10">
+    <button @tap="httpTest" class="mt-2">Http Test</button>
+    <button @tap="inc" class="mt-2">Counter - {{ counter }}</button>
+    <navigator url="/pages/about/index" class="w-full mt-2">
       <button>Show About</button>
     </navigator>
-    <view v-html="htmlContent" class="mt-10" />
+    <view v-html="htmlContent" class="mt-2" />
   </view>
 </template>
 
 <script lang="ts">
 import { computed } from 'vue'
-import './index.less'
 import { helloGet } from '@/service/api'
 import MutationTypes from '@/store/mutation-types'
 import Logo from '@/components/Logo.vue'

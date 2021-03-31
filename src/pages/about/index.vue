@@ -1,12 +1,11 @@
 <template>
-  <view class="container">
+  <view class="flex flex-col items-center p-2">
     <text>{{ msg }}</text>
-    <button @tap="back" class="btn-back">Back</button>
+    <button @tap="back" class="mt-2 bg-blue-500 text-white btn">Back</button>
   </view>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import './index.less'
 import Taro from '@tarojs/taro'
 
 export default defineComponent({
@@ -19,3 +18,8 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped>
+.btn:active {
+  @apply bg-blue-300 text-white;
+}
+</style>
