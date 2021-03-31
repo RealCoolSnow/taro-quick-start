@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "formulahendry.auto-close-tag",
     "formulahendry.auto-rename-tag",
-    "mrmlnc.vscode-autoprefixer"
+    "mrmlnc.vscode-autoprefixer",
+    "voorjaar.windicss-intellisense"
   ]
 }

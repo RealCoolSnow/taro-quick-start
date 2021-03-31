@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './app.less'
+import 'windi.css'
 import store from './store'
 
 const app = createApp({

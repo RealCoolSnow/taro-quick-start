@@ -10,7 +10,11 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
-  plugins: [],
+  plugins: [
+    ['taro-plugin-tailwind', {
+      // 具体参数见：https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts#L10
+    }]
+  ],
   defineConstants: {},
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
