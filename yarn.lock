@@ -1072,7 +1072,7 @@
   dependencies:
     "@tarojs/runtime" "3.1.5"
 
-"@tarojs/components@3.1.5", "@tarojs/components@^3.1.1":
+"@tarojs/components@3.1.5", "@tarojs/components@^3.1.5":
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/@tarojs/components/download/@tarojs/components-3.1.5.tgz#ad71641bc5b676f63ae9ba81000f707421cfb0e4"
   integrity sha1-rXFkG8W2dvY66bqBAA9wdCHPsOQ=
@@ -1112,7 +1112,7 @@
     resolve "1.15.1"
     yauzl "2.10.0"
 
-"@tarojs/mini-runner@^3.1.1":
+"@tarojs/mini-runner@^3.1.5":
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/@tarojs/mini-runner/download/@tarojs/mini-runner-3.1.5.tgz#a18d0b075ff7b450eeaa6f2f86ca1556f662815b"
   integrity sha1-oY0LB1/3tFDuqm8vhsoVVvZigVs=
@@ -1248,7 +1248,7 @@
     lodash "^4.17.15"
     scss-bundle "^3.0.2"
 
-"@tarojs/runtime@3.1.5", "@tarojs/runtime@^3.1.1":
+"@tarojs/runtime@3.1.5", "@tarojs/runtime@^3.1.5":
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/@tarojs/runtime/download/@tarojs/runtime-3.1.5.tgz#0aa52f703f33238253ba6b31f2ffff9b1aaea25b"
   integrity sha1-CqUvcD8zI4JTumsx8v//mxquols=
@@ -1299,7 +1299,7 @@
     acorn-walk "^8.0.0"
     loader-utils "^1.2.3"
 
-"@tarojs/taro@3.1.5", "@tarojs/taro@^3.1.1":
+"@tarojs/taro@3.1.5", "@tarojs/taro@^3.1.5":
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.1.5.tgz#c6f998051c59bc15bec8490aa135af35c8345780"
   integrity sha1-xvmYBRxZvBW+yEkKoTWvNcg0V4A=
@@ -1308,7 +1308,7 @@
     "@tarojs/runtime" "3.1.5"
     "@tarojs/taro-h5" "3.1.5"
 
-"@tarojs/webpack-runner@^3.1.1":
+"@tarojs/webpack-runner@^3.1.5":
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/@tarojs/webpack-runner/download/@tarojs/webpack-runner-3.1.5.tgz#90eab2df1d8974aeb414816a8b73f00ac1d5d6d7"
   integrity sha1-kOqy3x2JdK60FIFqi3PwCsHV1tc=
@@ -2226,7 +2226,7 @@ babel-plugin-transform-taroapi@3.1.5:
   resolved "https://registry.npm.taobao.org/babel-plugin-transform-taroapi/download/babel-plugin-transform-taroapi-3.1.5.tgz?cache=0&sync_timestamp=1617193934078&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-plugin-transform-taroapi%2Fdownload%2Fbabel-plugin-transform-taroapi-3.1.5.tgz#334c11a972fe68e69dca9d1e02be1a9f585d915f"
   integrity sha1-M0wRqXL+aOadyp0eAr4an1hdkV8=
 
-babel-preset-taro@^3.1.1:
+babel-preset-taro@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/babel-preset-taro/download/babel-preset-taro-3.1.5.tgz#109a5245e23935f03eb4de55a948df5e97fa9590"
   integrity sha1-EJpSReI5NfA+tN5VqUjfXpf6lZA=
@@ -3968,7 +3968,7 @@ escodegen@^1.11.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-taro@^3.1.1:
+eslint-config-taro@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npm.taobao.org/eslint-config-taro/download/eslint-config-taro-3.1.5.tgz#12a1cd005391f4da6c22d0487a8256a218d1539e"
   integrity sha1-EqHNAFOR9NpsItBIeoJWohjRU54=
