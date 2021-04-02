@@ -1,7 +1,7 @@
 {
   "name": "taro-quick-start",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Quick start project with Taro & Vue3.",
   "author": "CoolSnow<coolsnow2020@gmail.com>",
   "templateInfo": {
